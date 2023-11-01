@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
+import Form from "react-bootstrap/Form";
 
 export default function Employee() {
   return (
@@ -40,13 +39,14 @@ export default function Employee() {
             <input id="zip-code" type="number" />
           </fieldset>
 
-          <DropdownButton id="dropdown-basic-button" title="Department">
-            <Dropdown.Item>Sales</Dropdown.Item>
-            <Dropdown.Item>Marketing</Dropdown.Item>
-            <Dropdown.Item>Engineering</Dropdown.Item>
-            <Dropdown.Item>Human Resources</Dropdown.Item>
-            <Dropdown.Item>Legal</Dropdown.Item>
-          </DropdownButton>
+          <label htmlFor="department">Department</label>
+          <Form.Select aria-label="Select department" name="department">
+            <option>Sales</option>
+            <option>Marketing</option>
+            <option>Engineering</option>
+            <option>Human Resources</option>
+            <option>Legal</option>
+          </Form.Select>
         </form>
 
         <button>Save</button>
