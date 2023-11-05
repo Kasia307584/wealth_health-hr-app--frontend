@@ -3,12 +3,16 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
+import usStates from "./usStates";
 
 export default function Employee() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  // usStates.states.map((state) => {
+  //   console.log(state.name);
+  // });
 
   return (
     <>
@@ -18,6 +22,11 @@ export default function Employee() {
       <div className="container">
         <Link to="employee-list">View Current Employees</Link>
         <h2>Create Employee</h2>
+        <div>
+          {/* {usStates.states.map((state) => (
+            <p>{state.name}</p>
+          ))} */}
+        </div>
         <Form>
           <Form.Group controlId="firstName">
             <Form.Label>First Name</Form.Label>
@@ -48,7 +57,13 @@ export default function Employee() {
             </Form.Group>
             <Form.Group controlId="state">
               <Form.Label>State</Form.Label>
-              <Form.Select></Form.Select>
+              <Form.Select>
+                {usStates.states.map((state, index) => (
+                  <option value={state.abbreviation} key={index}>
+                    {state.name}
+                  </option>
+                ))}
+              </Form.Select>
             </Form.Group>
             <Form.Group controlId="zipCode">
               <Form.Label>Zip Code</Form.Label>
