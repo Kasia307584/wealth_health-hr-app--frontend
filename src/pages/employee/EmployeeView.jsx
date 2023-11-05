@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 export default function Employee() {
   return (
@@ -10,46 +11,56 @@ export default function Employee() {
       <div className="container">
         <Link to="employee-list">View Current Employees</Link>
         <h2>Create Employee</h2>
-        <form action="#" id="create-employee">
-          <label htmlFor="first-name">First Name</label>
-          <input type="text" id="first-name" />
-
-          <label htmlFor="last-name">Last Name</label>
-          <input type="text" id="last-name" />
-
-          <label htmlFor="date-of-birth">Date of Birth</label>
-          <input id="date-of-birth" type="text" />
-
-          <label htmlFor="start-date">Start Date</label>
-          <input id="start-date" type="text" />
+        <Form>
+          <Form.Group controlId="firstName">
+            <Form.Label>First Name</Form.Label>
+            <Form.Control type="text" />
+          </Form.Group>
+          <Form.Group controlId="lastName">
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control type="text" />
+          </Form.Group>
+          <Form.Group controlId="dateOfBirth">
+            <Form.Label>Date of Birth</Form.Label>
+            <Form.Control type="date" />
+          </Form.Group>
+          <Form.Group controlId="satrtDate">
+            <Form.Label>Start Date</Form.Label>
+            <Form.Control type="date" />
+          </Form.Group>
 
           <fieldset className="address">
             <legend>Address</legend>
-
-            <label htmlFor="street">Street</label>
-            <input id="street" type="text" />
-
-            <label htmlFor="city">City</label>
-            <input id="city" type="text" />
-
-            <label htmlFor="state">State</label>
-            <select name="state" id="state"></select>
-
-            <label htmlFor="zip-code">Zip Code</label>
-            <input id="zip-code" type="number" />
+            <Form.Group controlId="street">
+              <Form.Label>Street</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+            <Form.Group controlId="city">
+              <Form.Label>City</Form.Label>
+              <Form.Control type="text" />
+            </Form.Group>
+            <Form.Group controlId="state">
+              <Form.Label>State</Form.Label>
+              <Form.Select></Form.Select>
+            </Form.Group>
+            <Form.Group controlId="zipCode">
+              <Form.Label>Zip Code</Form.Label>
+              <Form.Control type="number" />
+            </Form.Group>
           </fieldset>
 
-          <label htmlFor="department">Department</label>
-          <Form.Select aria-label="Select department" name="department">
-            <option>Sales</option>
-            <option>Marketing</option>
-            <option>Engineering</option>
-            <option>Human Resources</option>
-            <option>Legal</option>
-          </Form.Select>
-        </form>
-
-        <button>Save</button>
+          <Form.Group controlId="department">
+            <Form.Label>Department</Form.Label>
+            <Form.Select aria-label="Select department" name="department">
+              <option value="sales">Sales</option>
+              <option value="marketing">Marketing</option>
+              <option value="engineering">Engineering</option>
+              <option value="human resources">Human Resources</option>
+              <option value="legal">Legal</option>
+            </Form.Select>
+          </Form.Group>
+          <Button type="submit">Save</Button>
+        </Form>
       </div>
       <div id="confirmation" className="modal">
         Employee Created!
