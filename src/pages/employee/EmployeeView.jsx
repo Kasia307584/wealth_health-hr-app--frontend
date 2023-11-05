@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import { useState } from "react";
 
 export default function Employee() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <div className="title">
@@ -59,11 +66,12 @@ export default function Employee() {
               <option value="legal">Legal</option>
             </Form.Select>
           </Form.Group>
-          <Button type="submit">Save</Button>
+          <Button onClick={handleShow}>Save</Button>
         </Form>
-      </div>
-      <div id="confirmation" className="modal">
-        Employee Created!
+
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Body>Employee Created!</Modal.Body>
+        </Modal>
       </div>
     </>
   );
