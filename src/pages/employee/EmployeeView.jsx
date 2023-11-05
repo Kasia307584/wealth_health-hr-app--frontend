@@ -22,11 +22,6 @@ export default function Employee() {
       <div className="container">
         <Link to="employee-list">View Current Employees</Link>
         <h2>Create Employee</h2>
-        <div>
-          {/* {usStates.states.map((state) => (
-            <p>{state.name}</p>
-          ))} */}
-        </div>
         <Form>
           <Form.Group controlId="firstName">
             <Form.Label>First Name</Form.Label>
