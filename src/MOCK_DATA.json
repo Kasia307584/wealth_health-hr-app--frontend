@@ -1,0 +1,26 @@
+[
+  {
+    "firstName": "Anne",
+    "lastName": "Dupont",
+    "startDate": "2023-04-28",
+    "departement": "Marketing",
+    "dateOfBirth": "1999-04-23",
+    "street": "Leon Frot",
+    "city": "Paris",
+    "state": "Alabama",
+    "zipCode": "75011",
+    "id": 1
+  },
+  {
+    "firstName": "Astrid",
+    "lastName": "Malfilatre",
+    "startDate": "2023-05-27",
+    "departement": "Sales",
+    "dateOfBirth": "1995-04-20",
+    "street": "Laugier",
+    "city": "Lille",
+    "state": "Alasca",
+    "zipCode": "85010",
+    "id": 2
+  }
+]

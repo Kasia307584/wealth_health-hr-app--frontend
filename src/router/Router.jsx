@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import EmployeeView from "../pages/employee/EmployeeView";
-import ListView from "../pages/list/ListView";
+import EmployeeView from "../pages/EmployeeView";
+import ListView from "../pages/ListView";
 
 export default function Router() {
   return (
