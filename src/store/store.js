@@ -26,7 +26,7 @@ const userDataSlice = createSlice({
       state.city = action.payload.city;
       state.state = action.payload.state;
       state.zipCode = action.payload.zipCode;
-      state.id = action.payload.id;
+      state.id += 1;
     },
   },
 });
