@@ -3,29 +3,25 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 const userDataSlice = createSlice({
   name: "userData",
   initialState: {
-    firstName: "",
-    lastName: "",
-    startDate: "",
-    departement: "",
-    dateOfBirth: "",
-    street: "",
-    city: "",
-    state: "",
-    zipCode: "",
-    id: "",
+    employeeTable: [],
+    id: 0,
   },
   reducers: {
     setData: (state, action) => {
       console.log(action.payload);
-      state.firstName = action.payload.firstName;
-      state.lastName = action.payload.lastName;
-      state.startDate = action.payload.startDate;
-      state.departement = action.payload.departement;
-      state.dateOfBirth = action.payload.dateOfBirth;
-      state.street = action.payload.street;
-      state.city = action.payload.city;
-      state.state = action.payload.state;
-      state.zipCode = action.payload.zipCode;
+      const data = {
+        firstName: action.payload.firstName,
+        lastName: action.payload.lastName,
+        startDate: action.payload.startDate,
+        departement: action.payload.departement,
+        dateOfBirth: action.payload.dateOfBirth,
+        street: action.payload.street,
+        city: action.payload.city,
+        state: action.payload.state,
+        zipCode: action.payload.zipCode,
+        id: state.id,
+      };
+      state.employeeTable.push({ data });
       state.id += 1;
     },
   },
