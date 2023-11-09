@@ -3,11 +3,13 @@ import {
   getCoreRowModel,
   flexRender,
 } from "@tanstack/react-table";
-import mockData from "../MOCK_DATA.json";
-import { useMemo } from "react";
+import { store } from "../store/store";
+// import { useSelector } from "react-redux";
 
 export default function Table() {
-  const data = useMemo(() => mockData, []);
+  const data = store.getState().employeeTable;
+  // const selectorTest = useSelector((state) => state.employeeTable);
+
   const columns = [
     {
       header: "First Name",

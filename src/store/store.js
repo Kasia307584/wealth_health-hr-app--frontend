@@ -21,7 +21,7 @@ const userDataSlice = createSlice({
         zipCode: action.payload.zipCode,
         id: state.id,
       };
-      state.employeeTable.push({ data });
+      state.employeeTable.push(data);
       state.id += 1;
     },
   },
