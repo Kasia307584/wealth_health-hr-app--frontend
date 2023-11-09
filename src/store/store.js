@@ -13,7 +13,7 @@ const userDataSlice = createSlice({
         firstName: action.payload.firstName,
         lastName: action.payload.lastName,
         startDate: action.payload.startDate,
-        departement: action.payload.departement,
+        department: action.payload.department,
         dateOfBirth: action.payload.dateOfBirth,
         street: action.payload.street,
         city: action.payload.city,

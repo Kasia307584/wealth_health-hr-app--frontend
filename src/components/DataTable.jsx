@@ -4,6 +4,7 @@ import {
   flexRender,
 } from "@tanstack/react-table";
 import { store } from "../store/store";
+import mockData from "../MOCK_DATA";
 // import { useSelector } from "react-redux";
 
 export default function Table() {
@@ -24,8 +25,8 @@ export default function Table() {
       accessorKey: "startDate",
     },
     {
-      header: "Departement",
-      accessorKey: "departement",
+      header: "Department",
+      accessorKey: "department",
     },
     {
       header: "Date of Birth",
@@ -82,6 +83,19 @@ export default function Table() {
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}
+            </tr>
+          ))}
+          {mockData.map((row) => (
+            <tr key={row.id}>
+              <td>{row.firstName}</td>
+              <td>{row.lastName}</td>
+              <td>{row.startDate}</td>
+              <td>{row.department}</td>
+              <td>{row.dateOfBirth}</td>
+              <td>{row.street}</td>
+              <td>{row.city}</td>
+              <td>{row.state}</td>
+              <td>{row.zipCode}</td>
             </tr>
           ))}
         </tbody>

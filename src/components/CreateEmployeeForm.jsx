@@ -5,7 +5,7 @@ import { useState } from "react";
 import usStates from "../pages/data_usStates.json";
 import { setData, store } from "../store/store";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function EmployeeForm() {
   const [show, setShow] = useState(false);
@@ -15,7 +15,7 @@ export default function EmployeeForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [startDate, setStartDate] = useState("");
-  const [departement, setDepartement] = useState("");
+  const [department, setDepartment] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
@@ -24,7 +24,7 @@ export default function EmployeeForm() {
 
   const dispatch = useDispatch();
   // const selectorTest = useSelector((state) => state.userData);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   async function handleFormSubmit(event) {
     event.preventDefault();
@@ -32,7 +32,7 @@ export default function EmployeeForm() {
       firstName: firstName,
       lastName: lastName,
       startDate: startDate,
-      departement: departement,
+      department: department,
       dateOfBirth: dateOfBirth,
       street: street,
       city: city,
@@ -41,10 +41,10 @@ export default function EmployeeForm() {
     };
     dispatch(setData(data));
     // console.log(selectorTest);
-    console.log("currentState", store.getState());
-    if (data) {
-      navigate("/employee-list");
-    }
+    console.log("currentState", store.getState().employeeTable);
+    // if (data) {
+    //   navigate("/employee-list");
+    // }
   }
 
   return (
@@ -100,7 +100,8 @@ export default function EmployeeForm() {
             <Form.Select
               aria-label="Select state"
               name="state"
-              onChange={(e) => setState(e.value)}
+              value={state}
+              onChange={(e) => setState(e.target.value)}
             >
               {usStates.states.map((state, index) => (
                 <option value={state.abbreviation} key={index}>
@@ -123,13 +124,14 @@ export default function EmployeeForm() {
           <Form.Select
             aria-label="Select department"
             name="department"
-            onChange={(e) => setDepartement(e.value)}
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
           >
-            <option value="sales">Sales</option>
-            <option value="marketing">Marketing</option>
-            <option value="engineering">Engineering</option>
-            <option value="human resources">Human Resources</option>
-            <option value="legal">Legal</option>
+            <option value="Sales">Sales</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Human Resources">Human Resources</option>
+            <option value="Legal">Legal</option>
           </Form.Select>
         </Form.Group>
         <Button onClick={handleShow} type="submit">
