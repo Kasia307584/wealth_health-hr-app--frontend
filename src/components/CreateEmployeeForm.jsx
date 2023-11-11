@@ -5,7 +5,7 @@ import { useState } from "react";
 import usStates from "../pages/data_usStates.json";
 import { setData, store } from "../store/store";
 import { useDispatch } from "react-redux";
-// import { useNavigate } from "react-router-dom";
+import MySelect from "../mySelectComponent";
 
 export default function EmployeeForm() {
   const [show, setShow] = useState(false);
@@ -23,8 +23,6 @@ export default function EmployeeForm() {
   const [zipCode, setZipCode] = useState("");
 
   const dispatch = useDispatch();
-  // const selectorTest = useSelector((state) => state.userData);
-  // const navigate = useNavigate();
 
   async function handleFormSubmit(event) {
     event.preventDefault();
@@ -40,12 +38,28 @@ export default function EmployeeForm() {
       zipCode: zipCode,
     };
     dispatch(setData(data));
-    // console.log(selectorTest);
     console.log("currentState", store.getState().employeeTable);
-    // if (data) {
-    //   navigate("/employee-list");
-    // }
   }
+
+  const options = [
+    {
+      label: "Sales",
+      value: "S",
+    },
+    {
+      label: "Marketing",
+      value: "M",
+    },
+    {
+      label: "Engineering",
+      value: "E",
+    },
+  ];
+
+  // function handleChangeSelect(e) {
+  //   console.log(e);
+  //   console.log("handleChangeSelect in work");
+  // }
 
   return (
     <>
@@ -133,6 +147,13 @@ export default function EmployeeForm() {
             <option value="Human Resources">Human Resources</option>
             <option value="Legal">Legal</option>
           </Form.Select>
+        </Form.Group>
+        <Form.Group controlId="test">
+          <MySelect
+            options={options}
+            label="departement"
+            // onChange={handleChangeSelect}
+          />
         </Form.Group>
         <Button onClick={handleShow} type="submit">
           Save
