@@ -1,13 +1,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-export default function KatarzynaSelect({ options, label }) {
-  console.log(label);
+export default function KatarzynaSelect({ options, label, onChange }) {
   console.log(options);
   const [selectedValue, setSelectValue] = useState("");
 
   useEffect(() => {
-    console.log(selectedValue);
+    // const selectedOption = options.filter(option => (option.value === selectedValue))
+    // let selectedObj = {}
+    // options.forEach(option => {
+    //     if(option.value === selectedOption) {
+    //         selectedObj = option
+    //     }
+    // })
+    onChange(selectedValue);
   }, [selectedValue]);
 
   function capitalize(word) {
@@ -22,6 +28,7 @@ export default function KatarzynaSelect({ options, label }) {
         className="form-select"
         id="department"
         name="department"
+        value={selectedValue}
         onChange={(e) => setSelectValue(e.target.value)}
       >
         {options.map((option, index) => (

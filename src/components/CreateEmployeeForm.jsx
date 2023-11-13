@@ -56,10 +56,9 @@ export default function EmployeeForm() {
     },
   ];
 
-  // function handleChangeSelect(e) {
-  //   console.log(e);
-  //   console.log("handleChangeSelect in work");
-  // }
+  const handleChangeSelect = (e) => {
+    console.log(e);
+  };
 
   return (
     <>
@@ -152,7 +151,7 @@ export default function EmployeeForm() {
           <MySelect
             options={options}
             label="departement"
-            // onChange={handleChangeSelect}
+            onChange={(e) => handleChangeSelect(e)}
           />
         </Form.Group>
         <Button onClick={handleShow} type="submit">
