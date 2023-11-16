@@ -5,7 +5,6 @@ import { useState } from "react";
 import usStates from "../pages/data_usStates.json";
 import { setData, store } from "../store/store";
 import { useDispatch } from "react-redux";
-import MySelect from "../mySelectComponent";
 
 export default function EmployeeForm() {
   const [show, setShow] = useState(false);
@@ -40,25 +39,6 @@ export default function EmployeeForm() {
     dispatch(setData(data));
     console.log("currentState", store.getState().employeeTable);
   }
-
-  const options = [
-    {
-      label: "Sales",
-      value: "S",
-    },
-    {
-      label: "Marketing",
-      value: "M",
-    },
-    {
-      label: "Engineering",
-      value: "E",
-    },
-  ];
-
-  const handleChangeSelect = (e) => {
-    console.log(e);
-  };
 
   return (
     <>
@@ -147,13 +127,7 @@ export default function EmployeeForm() {
             <option value="Legal">Legal</option>
           </Form.Select>
         </Form.Group>
-        <Form.Group controlId="test">
-          <MySelect
-            options={options}
-            label="departement"
-            onChange={(e) => handleChangeSelect(e)}
-          />
-        </Form.Group>
+
         <Button onClick={handleShow} type="submit">
           Save
         </Button>
