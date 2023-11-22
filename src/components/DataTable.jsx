@@ -4,7 +4,7 @@ import {
   flexRender,
 } from "@tanstack/react-table";
 import { store } from "../store/store";
-import mockData from "../MOCK_DATA";
+import mockData from "../data/MOCK_DATA";
 // import { useSelector } from "react-redux";
 
 export default function Table() {

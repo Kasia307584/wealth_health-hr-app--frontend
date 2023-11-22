@@ -2,9 +2,11 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
-import usStates from "../pages/data_usStates.json";
+import usaStates from "../data/options_usaStates.json";
+import departments from "../data/options_departments.json";
 import { setData, store } from "../store/store";
 import { useDispatch } from "react-redux";
+import MySelect from "@kazu2233/react-select-component";
 
 export default function EmployeeForm() {
   const [show, setShow] = useState(false);
@@ -39,6 +41,13 @@ export default function EmployeeForm() {
     dispatch(setData(data));
     console.log("currentState", store.getState().employeeTable);
   }
+
+  const handleChangeSelectDepartment = (e) => {
+    setDepartment(e?.value);
+  };
+  const handleChangeSelectState = (e) => {
+    setState(e?.value);
+  };
 
   return (
     <>
@@ -88,21 +97,11 @@ export default function EmployeeForm() {
               onChange={(e) => setCity(e.target.value)}
             />
           </Form.Group>
-          <Form.Group controlId="state">
-            <Form.Label>State</Form.Label>
-            <Form.Select
-              aria-label="Select state"
-              name="state"
-              value={state}
-              onChange={(e) => setState(e.target.value)}
-            >
-              {usStates.states.map((state, index) => (
-                <option value={state.abbreviation} key={index}>
-                  {state.name}
-                </option>
-              ))}
-            </Form.Select>
-          </Form.Group>
+          <MySelect
+            options={usaStates}
+            onChange={handleChangeSelectState}
+            label="state"
+          />
           <Form.Group controlId="zipCode">
             <Form.Label>Zip Code</Form.Label>
             <Form.Control
@@ -112,21 +111,11 @@ export default function EmployeeForm() {
           </Form.Group>
         </fieldset>
 
-        <Form.Group controlId="department">
-          <Form.Label>Department</Form.Label>
-          <Form.Select
-            aria-label="Select department"
-            name="department"
-            value={department}
-            onChange={(e) => setDepartment(e.target.value)}
-          >
-            <option value="Sales">Sales</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Human Resources">Human Resources</option>
-            <option value="Legal">Legal</option>
-          </Form.Select>
-        </Form.Group>
+        <MySelect
+          options={departments}
+          onChange={handleChangeSelectDepartment}
+          label="departement"
+        />
 
         <Button onClick={handleShow} type="submit">
           Save
