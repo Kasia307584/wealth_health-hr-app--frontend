@@ -117,7 +117,12 @@ export default function EmployeeForm() {
           label="departement"
         />
 
-        <Button onClick={handleShow} type="submit">
+        <Button
+          onClick={handleShow}
+          type="submit"
+          variant="secondary"
+          className="btn-save"
+        >
           Save
         </Button>
       </Form>
