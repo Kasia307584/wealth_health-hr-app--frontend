@@ -35,3 +35,15 @@ label {
 .address {
   margin-top: 10px;
 }
+
+.w3-container,
+.w3-panel {
+  padding: unset;
+}
+
+.table__filter-search,
+.table__pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}

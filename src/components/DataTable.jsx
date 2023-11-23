@@ -7,6 +7,7 @@ import {
   getFilteredRowModel,
 } from "@tanstack/react-table";
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
 
 export default function Table({ data, columns }) {
   const [sorting, setSorting] = useState([]);
@@ -29,7 +30,7 @@ export default function Table({ data, columns }) {
 
   return (
     <div>
-      <div>
+      <div className="table__filter-search">
         <span>
           Show
           <select
@@ -93,31 +94,43 @@ export default function Table({ data, columns }) {
             ))}
           </tbody>
         </table>
-        <div>
+        <div className="table__pagination">
           <span>
             Page
             {table.getState().pagination.pageIndex + 1} of{" "}
             {table.getPageCount()}
           </span>
           <span>
-            <button onClick={() => table.setPageIndex(0)}>First</button>
-            <button
+            <Button
+              variant="outline-secondary"
+              size="sm"
+              onClick={() => table.setPageIndex(0)}
+            >
+              First
+            </Button>
+            <Button
+              variant="outline-secondary"
+              size="sm"
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
             >
               Previous
-            </button>
-            <button
+            </Button>
+            <Button
+              variant="outline-secondary"
+              size="sm"
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
             >
               Next
-            </button>
-            <button
+            </Button>
+            <Button
+              variant="outline-secondary"
+              size="sm"
               onClick={() => table.setPageIndex(table.getPageCount() - 1)}
             >
               Last
-            </button>
+            </Button>
           </span>
         </div>
       </div>
