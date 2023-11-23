@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Table from "../components/DataTable";
 import { store } from "../store/store";
+import Button from "react-bootstrap/Button";
 
 export default function List() {
   const data = store.getState().employeeTable;
@@ -49,7 +50,9 @@ export default function List() {
       <div id="employee-div" className="container">
         <h1>Current Employees</h1>
         <Table data={data} columns={columns} />
-        <Link to="/">Home</Link>
+        <Link to="/" className="btn-link">
+          <Button variant="outline-secondary">Home</Button>
+        </Link>
       </div>
     </>
   );

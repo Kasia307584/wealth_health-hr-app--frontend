@@ -8,6 +8,7 @@ import {
 } from "@tanstack/react-table";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 export default function Table({ data, columns }) {
   const [sorting, setSorting] = useState([]);
@@ -47,14 +48,15 @@ export default function Table({ data, columns }) {
           </select>
           entries
         </span>
-        <span>
-          Search:
-          <input
+        <div className="search">
+          <span>Search:</span>
+          <Form.Control
             type="text"
             value={filtering}
             onChange={(e) => setFiltering(e.target.value)}
+            className="search-input"
           />
-        </span>
+        </div>
       </div>
       <div className="w3-container">
         <table className="w3-table-all">

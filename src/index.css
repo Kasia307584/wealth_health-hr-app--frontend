@@ -16,9 +16,13 @@ body {
   text-align: center;
 }
 
-h1 {
+.heading {
   font-size: 60px;
   padding-bottom: 30px;
+}
+
+h2 {
+  padding: 25px 0 0 0;
 }
 
 .container {
@@ -46,7 +50,7 @@ label {
 }
 
 .btn-save {
-  margin: 25px;
+  margin: 35px;
 }
 
 .w3-container,
@@ -58,5 +62,20 @@ label {
 .table__pagination {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 0;
+}
+
+.table__filter-search > span > select {
+  border-radius: 5px;
+  border: 0;
+  margin: 0 5px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+.search > input.form-control {
+  margin-left: 5px;
 }

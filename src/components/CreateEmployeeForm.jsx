@@ -121,6 +121,7 @@ export default function EmployeeForm() {
           onClick={handleShow}
           type="submit"
           variant="secondary"
+          size="lg"
           className="btn-save"
         >
           Save
