@@ -16,11 +16,11 @@ export default function EmployeeForm() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [startDate, setStartDate] = useState("");
-  const [department, setDepartment] = useState("");
+  const [department, setDepartment] = useState(departments[0].value);
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
-  const [state, setState] = useState("");
+  const [state, setState] = useState(usaStates[0].value);
   const [zipCode, setZipCode] = useState("");
 
   const dispatch = useDispatch();
