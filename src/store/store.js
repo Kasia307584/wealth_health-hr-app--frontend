@@ -1,9 +1,10 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import mockData from "../constants/MOCK_DATA.json";
 
 const userDataSlice = createSlice({
   name: "userData",
   initialState: {
-    employeeTable: [],
+    employeeTable: mockData,
     id: 0,
   },
   reducers: {
