@@ -40,6 +40,13 @@ export default function EmployeeForm() {
     };
     dispatch(setData(data));
     console.log("currentState", store.getState().employeeTable);
+    setFirstName("");
+    setLastName("");
+    setStartDate("");
+    setDateOfBirth("");
+    setStreet("");
+    setCity("");
+    setZipCode("");
   }
 
   const handleChangeSelectDepartment = (e) => {
@@ -55,6 +62,7 @@ export default function EmployeeForm() {
         <Form.Group controlId="firstName">
           <Form.Label>First Name</Form.Label>
           <Form.Control
+            value={firstName}
             type="text"
             onChange={(e) => setFirstName(e.target.value)}
           />
@@ -62,6 +70,7 @@ export default function EmployeeForm() {
         <Form.Group controlId="lastName">
           <Form.Label>Last Name</Form.Label>
           <Form.Control
+            value={lastName}
             type="text"
             onChange={(e) => setLastName(e.target.value)}
           />
@@ -69,6 +78,7 @@ export default function EmployeeForm() {
         <Form.Group controlId="dateOfBirth">
           <Form.Label>Date of Birth</Form.Label>
           <Form.Control
+            value={dateOfBirth}
             type="date"
             onChange={(e) => setDateOfBirth(e.target.value)}
           />
@@ -76,6 +86,7 @@ export default function EmployeeForm() {
         <Form.Group controlId="satrtDate">
           <Form.Label>Start Date</Form.Label>
           <Form.Control
+            value={startDate}
             type="date"
             onChange={(e) => setStartDate(e.target.value)}
           />
@@ -86,6 +97,7 @@ export default function EmployeeForm() {
           <Form.Group controlId="street">
             <Form.Label>Street</Form.Label>
             <Form.Control
+              value={street}
               type="text"
               onChange={(e) => setStreet(e.target.value)}
             />
@@ -93,6 +105,7 @@ export default function EmployeeForm() {
           <Form.Group controlId="city">
             <Form.Label>City</Form.Label>
             <Form.Control
+              value={city}
               type="text"
               onChange={(e) => setCity(e.target.value)}
             />
@@ -105,6 +118,7 @@ export default function EmployeeForm() {
           <Form.Group controlId="zipCode">
             <Form.Label>Zip Code</Form.Label>
             <Form.Control
+              value={zipCode}
               type="number"
               onChange={(e) => setZipCode(e.target.value)}
             />
