@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import Table from "../components/DataTable";
-import { store } from "../store/store";
 import Button from "react-bootstrap/Button";
+import { useSelector } from "react-redux";
 
 export default function List() {
-  const data = store.getState().employeeTable;
+  const data = useSelector((state) => state.employeeTable);
 
   const columns = [
     {
