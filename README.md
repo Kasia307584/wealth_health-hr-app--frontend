@@ -14,9 +14,12 @@ This app was developed as part of the [OpenClassrooms](https://openclassrooms.co
 
 Users should be able to:
 
-- Add an employee through a form and save it
-- View a table of all employees with options to filter and search through records
-- Navigate between adding employees and consulting the employee list
+- Add a new employee using a form and save the entry
+- View a table of all employees with the following functionalities:
+  - sort by different columns
+  - filter using a search bar
+  - navigate through pages using pagination controls
+- Navigate between the employee form and the employee list views
 
 ### Links
 
@@ -24,12 +27,19 @@ Users should be able to:
 
 ## My process
 
+### Custom Components
+
+This project includes a self-built **React Select Component**, which was developed to enhance form usability. The component is published as an npm package and integrated into this project.
+
+- 📦 **npm package:** [@kazu2233/react-select-component](https://www.npmjs.com/package/@kazu2233/react-select-component)
+- 💻 **Source code:** [GitHub Repository](https://github.com/Kasia307584/react-select-component)
+
 ### Built with
 
 - **React.js** for building the user interface
 - **React Router** for managing navigation between pages
 - **React Redux** for managing global state
-- **React Select Component**: A reusable, self-built package published on NPM
+- **React Select Component**: A reusable, self-built package published on npm
 - **React Bootstrap** for consistent and responsive UI styling
 - **Rollup** and **Babel** for building and deploying the React Select Component
 - **CSS3** and **BEM methodology** for general styling and maintainable code structure
@@ -37,7 +47,7 @@ Users should be able to:
 
 ### What I learned
 
-- Build, deploy and publish a reusable NPM package (`React Select Component`)
+- Build, deploy and publish a reusable npm package (`React Select Component`)
 - Conduct snapshot and performance tests to optimize the application
 - Compare performance metrics between different versions of the application (React and jQuery solutions) by using the `Lighthouse` test
 - Use libraries like React Bootstrap or TanStack Table for efficient UI
