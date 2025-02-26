@@ -31,8 +31,8 @@ Users should be able to:
 
 This project includes a self-built **React Select Component**, which was developed to enhance form usability. The component is published as an npm package and integrated into this project.
 
-- 📦 **npm package:** [@kazu2233/react-select-component](https://www.npmjs.com/package/@kazu2233/react-select-component)
-- 💻 **Source code:** [GitHub Repository](https://github.com/Kasia307584/react-select-component)
+- 📦 npm package: [@kazu2233/react-select-component](https://www.npmjs.com/package/@kazu2233/react-select-component)
+- 💻 Source code: [GitHub Repository](https://github.com/Kasia307584/react-select-component)
 
 ### Built with
 
@@ -52,6 +52,15 @@ This project includes a self-built **React Select Component**, which was develop
 - Compare performance metrics between different versions of the application (React and jQuery solutions) by using the `Lighthouse` test
 - Use libraries like React Bootstrap or TanStack Table for efficient UI
 - Document code using JSDoc methodology (for `React Select Component`)
+
+### Performance Report
+
+Lighthouse tests were conducted to measure the application's performance, accessibility, and best practices compliance. Two separate tests were run:
+
+- **Old version (jQuery):** [Lighthouse Report](./reports/lighthouse-report-jquery.pdf) – Performance analysis of the initial implementation using jQuery.
+- **New version (React):** [Lighthouse Report](./reports/lighthouse-report-react.pdf) – Performance analysis after refactoring the application with React.
+
+These tests allow for a direct comparison of improvements made during the transition.
 
 ### Continued development
 
