@@ -41,15 +41,16 @@ This project includes a self-built **React Select Component**, which was develop
 - **React Redux** for managing global state
 - **React Select Component**: A reusable, self-built package published on npm
 - **React Bootstrap** for consistent and responsive UI styling
-- **Rollup** and **Babel** for building and deploying the React Select Component
+- **Rollup** and **Babel** for building and deploying the `React Select Component`
 - **CSS3** and **BEM methodology** for general styling and maintainable code structure
+- **Vite** for fast development and optimized builds
 - **Vercel** for easy deployment and hosting of the live application
 
 ### What I learned
 
 - Build, deploy and publish a reusable npm package (`React Select Component`)
 - Conduct snapshot and performance tests to optimize the application
-- Compare performance metrics between different versions of the application (React and jQuery solutions) by using the `Lighthouse` test
+- Compare performance metrics between different versions of the application (React and jQuery solutions) by using the Lighthouse test
 - Use libraries like React Bootstrap or TanStack Table for efficient UI
 - Document code using JSDoc methodology (for `React Select Component`)
 
