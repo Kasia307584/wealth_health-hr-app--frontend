@@ -38,7 +38,7 @@ This project includes a self-built **React Select Component**, which was develop
 
 - **React.js** for building the user interface
 - **React Router** for managing navigation between pages
-- **React Redux** for managing global state
+- **Redux Toolkit** and **React Redux** for managing global state in a React environment
 - **React Select Component**: A reusable, self-built package published on npm [@kazu2233/react-select-component](https://www.npmjs.com/package/@kazu2233/react-select-component)
 - **React Bootstrap** for consistent and responsive UI styling
 - **TanStack React Table** for efficient and flexible data table management
