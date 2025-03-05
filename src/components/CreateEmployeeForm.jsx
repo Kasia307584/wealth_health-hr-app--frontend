@@ -25,7 +25,7 @@ export default function EmployeeForm() {
 
   const dispatch = useDispatch();
 
-  async function handleFormSubmit(event) {
+  function handleFormSubmit(event) {
     event.preventDefault();
     const data = {
       firstName: firstName,
