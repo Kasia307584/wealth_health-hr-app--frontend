@@ -1,6 +1,6 @@
 # HRnet - Employee Management for Human Resources
 
-The HRnet app is a streamlined human resources management tool designed to simplify the process of adding, viewing, filtering, and searching for employees. This application empowers HR professionals by providing an intuitive interface for managing employee data efficiently. Whether adding a new employee through a form or browsing through the employee database with advanced filtering and search capabilities, HRnet offers a smooth user experience built on modern web development technologies.
+The HRnet app is a human resources management tool designed to simplify the process of adding, viewing, filtering, and searching for employees. This application empowers HR professionals by providing an intuitive interface for managing employee data. Whether adding a new employee through a form or browsing through the employee database with advanced filtering and search capabilities, HRnet offers a smooth user experience built on modern web development technologies.
 
 This app was developed as part of the [OpenClassrooms](https://openclassrooms.com/) curriculum.
 
@@ -48,21 +48,21 @@ This project includes a self-built **React Select Component**, which was develop
 
 ### What I learned
 
-- Gain **hands-on experience in the full package lifecycle** — from coding and bundling to documentation and testing, and finally, versioning and publishing on npm.
-- **Compare performance metrics** between different versions of the application (React and jQuery solutions) by using the Lighthouse test, overcoming the challenge of running and testing the app in its production build.
-- Evaluate and **choose external libraries** based on project needs, considering factors like maintenance, community support, and features. Initially tested alternatives like React Bootstrap Table Next before selecting TanStack React Table for its flexibility and active development.
+- Gaining **hands-on experience in the full package lifecycle** — from coding and bundling to documentation and testing, and finally, versioning and publishing on npm.
+- **Comparing performance metrics** between different versions of the application (React and jQuery solutions) by using the Lighthouse test, overcoming the challenge of running and testing the app in its production build.
+- **Evaluating and choosing external libraries** based on project needs, considering factors like maintenance, community support, and features. Initially tested alternatives like React Bootstrap Table Next before selecting TanStack React Table for its flexibility and active development.
 
 ### Performance Report
 
 Lighthouse tests were conducted to measure the application's performance, accessibility, and best practices compliance. Two separate tests were run:
 
-- **old version (jQuery):** [Lighthouse Report](./reports/lighthouse-report-jquery.pdf) – performance analysis of the initial implementation using jQuery
-- **new version (React):** [Lighthouse Report](./reports/lighthouse-report-react.pdf) – performance analysis after refactoring the application with React
+- **Old version (jQuery):** [Lighthouse Report](./reports/lighthouse-report-jquery.pdf) – performance analysis of the initial implementation using jQuery
+- **New version (React):** [Lighthouse Report](./reports/lighthouse-report-react.pdf) – performance analysis after refactoring the application with React
 
 These tests allow for a direct comparison of improvements made during the transition.
 
 ### Continued development
 
-- incorporate localStorage to complement Redux state management
-- implement form input validation for more robust user input handling
-- refactor code in the `CreateEmployeeForm.jsx` to minimize repetition and enhance maintainability
+- Incorporate localStorage to complement Redux state management.
+- Implement form input validation for more robust user input handling.
+- Refactor code in the `CreateEmployeeForm.jsx` to minimize repetition and enhance maintainability.
